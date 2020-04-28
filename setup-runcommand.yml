@@ -1,4 +1,4 @@
 - hosts: all 
   sudo: true
   tasks:
-    - script: .scrip/setup-runcommand.sh
+    - script: /bin/sh https://raw.githubusercontent.com/thangnguyen1705/AWX/master/scrip/setup-runcommand.sh

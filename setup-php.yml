@@ -1,0 +1,4 @@
+- hosts: NL
+  roles:
+    - role: ansible.php
+      become: yes

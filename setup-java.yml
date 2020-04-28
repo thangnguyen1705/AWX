@@ -1,0 +1,6 @@
+---
+- hosts: dev
+  remote_user: ansible
+  become: true
+  roles:
+    - role: geerlingguy.java

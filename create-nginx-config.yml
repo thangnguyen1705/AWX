@@ -1,0 +1,21 @@
+---
+- hosts: dev
+  tasks:
+#- name: ensure nginx is at the latest version
+#yum: name=nginx state=latest
+#become: yes
+- name: start nginx
+service:
+name: nginx
+state: started
+become: yes
+- name: copy the nginx config file and restart nginx
+copy:
+src: /etc/ansible/roles/ansible.nginx-config/nginx-tpl.conf
+dest: /etc/nginx/conf.d/nginx-new.conf
+become: yes
+- name: restart nginx
+service:
+name: nginx
+state: restarted
+become: yes

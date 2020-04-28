@@ -1,0 +1,5 @@
+- hosts: dev
+  sudo: true
+  tasks:
+  - name: create a deployment
+    command: kubectl apply -f nginx-deploy.yml

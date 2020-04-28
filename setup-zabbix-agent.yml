@@ -1,0 +1,6 @@
+- hosts: vimo
+  remote_user: ansible
+  become: true
+  roles:
+    - role: ansible-zabbix-agent 
+      become: yes

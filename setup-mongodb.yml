@@ -1,0 +1,4 @@
+- hosts: alepay
+  roles:
+    - role: ansible.mongodb
+      become: yes

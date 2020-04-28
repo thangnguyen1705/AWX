@@ -1,0 +1,6 @@
+---
+- hosts: alego
+  remote_user: ansible
+  become: true
+  roles:
+    - role: ansible.nginx

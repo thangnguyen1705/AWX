@@ -1,0 +1,9 @@
+#- hosts: allservers
+- hosts: webservers
+  remote_user: ansible
+  become: yes
+  become_method: sudo  
+
+  tasks:
+    - name: upgrade all packages
+      yum: name=* state=latest

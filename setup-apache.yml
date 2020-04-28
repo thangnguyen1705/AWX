@@ -1,0 +1,6 @@
+- hosts: NL
+  remote_user: ansible
+  become: true
+  roles:
+    - role: ansible.apache
+      become: yes

@@ -1,0 +1,4 @@
+- hosts: mpos
+  roles:
+    - role: ansible.create-user 
+      become: yes

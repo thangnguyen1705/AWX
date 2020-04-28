@@ -1,0 +1,4 @@
+- hosts: allservers
+  roles:
+    - role: ansible.update-openssl
+      become: yes

@@ -1,0 +1,16 @@
+- name: Fetch a backup of a postgres DB that runs on a remote docker container
+  hosts: all
+  gather_facts: yes
+
+  tasks:
+    - name: Set backup_dir and db_dump_name variable
+      set_fact:
+        backup_dir: /tmp/bkups/blog/postgres/db
+        db_dump_name: web_db-{{ ansible_date_time.date }}.bkp
+
+    - name: Make sure backup directory exists on the local machine
+      delegate_to: localhost
+      become: no
+      file:
+        state: directory
+        path: "{{ backup_dir }}"

@@ -4,4 +4,6 @@
     - name: del user
       command: sudo userdel thienha
     - name: Del forder home
-      command: sudo rm -rm /home/thienha
+      command: sudo rm -rf /home/thienha
+
+      
